@@ -33,25 +33,25 @@ int main(){
 
 void nonRecursiveFib(int n){
 
-	int a, b, aux, i;							        	//Complexidade O(1)
+	int a, b, aux, i;										//Complexidade O(1)
 
-	a = 1;										        	//Complexidade O(1)
-	b = 0;										        	//Complexidade O(1)
+	a = 1;													//Complexidade O(1)
+	b = 0;													//Complexidade O(1)
 
-	for(i = 0; i < n; i++){						        	//Complexidade O(n)
-    	aux = a + b;							        	//Complexidade O(1)
-		a = b;										        //Complexidade O(1)
-		b = aux;									        //Complexidade O(1)
+	for(i = 0; i < n; i++){									//Complexidade O(n)
+    	aux = a + b;										//Complexidade O(1)
+		a = b;												//Complexidade O(1)
+		b = aux;											//Complexidade O(1)
 
 		//printf("%d\n", aux);
 	}
-	printf("\nFibonacci nao rec. de %d = %d\n", n, aux);    //Complexidade O(1)
+	printf("\nFibonacci nao rec. de %d = %d\n", n, aux);	//Complexidade O(1)
 }
 
 int recursiveFib(int n){
 
-	if(n == 1 || n == 2)                                    //Complexidade O(1)
-		return 1;                                           //Complexidade O(1)
+	if(n == 1 || n == 2)									//Complexidade O(1)
+		return 1;											//Complexidade O(1)
 	else
-		return recursiveFib(n - 1) + recursiveFib(n - 2);   //Complexidade O(2^n)
+		return recursiveFib(n - 1) + recursiveFib(n - 2);	//Complexidade O(2^n)
 }
